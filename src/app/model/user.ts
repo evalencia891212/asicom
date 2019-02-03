@@ -1,7 +1,5 @@
 export class User {
-  userID: number;
-  name: string;
+  userId: number;
+  userName: string;
   password: string;
-  status: string;
-  rollId: number;
 }
