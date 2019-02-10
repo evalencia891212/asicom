@@ -1,0 +1,35 @@
+<div class="col">
+  <h2>Clientes</h2>
+  <button class="btn btn-primary" (click)="addProduct()">Agregar Producto</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">productId</th>
+        <th>Clave</th>
+        <th>Nombre</th>
+        <th>Lista de Precios</th>
+        <th>Lista de Costos</th>
+        <th>Unidad de Medida</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td class="hidden">{{ product.productId }}</td>
+        <td>{{ product.key }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.priceListId }}</td>
+        <td>{{ product.costListId }}</td>
+        <td>{{ product.mesureUnitId }}</td>
+        <td>
+          <button class="btn btn-success" (click)="editProduct(product)">
+            Editar
+          </button>
+          <button class="btn btn-danger" (click)="deleteProduct(product)">
+            Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

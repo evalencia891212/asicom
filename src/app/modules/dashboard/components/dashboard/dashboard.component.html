@@ -1,7 +1,142 @@
-<p>
-  dashboard works!
-</p>
 <nav>
-  <a routerLink="/list-costumer">Clientes</a> |
-  <a routerLink="/product">Productos</a> |
+    <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Catalogos <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" routerLink="/list-costumer">Clientes</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink="/list-unit">Unidades de Medida</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink="/list-products">Productos</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li>
+        </ul>
+      </div>
 </nav>
+
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+
+        <div id="image1" class="cropcircle"></div>
+        <div class="sidebar-header">
+            <h3>SIERP</h3>
+
+        </div>
+        <p>Bienbenido : Emmanuel Valencia</p>
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Ventas</a>
+                    </li>
+                    <li>
+                        <a href="#">Administracion</a>
+                    </li>
+                    <li>
+                        <a href="#">Utilerias</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Acerca de</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Operacion</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Cargas</a>
+                    </li>
+                    <li>
+                        <a href="#">Inventario</a>
+                    </li>
+                    <li>
+                        <a href="#">Liquidacion</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Reportes</a>
+            </li>
+            <li>
+                <a href="#">Soporte</a>
+            </li>
+        </ul>
+
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                    <ul class="nav navbar-nav ml-auto">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h2>Mision</h2>
+        <p>Lograr un crecimiento rentable y sustentable para el desarrollo economico y profecional de todo el grupo que conforma DSD</p>
+
+        <div class="line"></div>
+
+        <h2>Vision</h2>
+        <p>Queremos ser reconocidos como una compañia en crecimiento. Estamos comprometidos a lograr un desarollo consistente a largo plazo. Todo esto sustentado en buenas practicas comerciales</p>
+        <p>y un servicio de calidad total para nuestros clientes</p>
+
+        <div class="line"></div>
+
+        <h2>Valores</h2>
+        <ul>
+            <li type="circle">Mejora Continua</li>
+            <li type="circle">Profecionalismo</li>
+            <li type="circle">Exelencia</li>
+            <li type="circle">Puntualidad</li>
+            <li type="circle">Trabajo en Equipo</li>
+            <li type="circle">Etica</li>
+            <li type="circle">Honestidad</li>
+            <li type="circle">Responsabilidad</li>
+        </ul>
+        <div class="line"></div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+

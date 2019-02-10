@@ -12,6 +12,12 @@ import { EditCostumerComponent } from './modules/costumers/components/edit-costu
 import { ListCostumerComponent } from './modules/costumers/components/list-costumer/list-costumer.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddUnitComponent } from './modules/mesure-unit/components/add-unit/add-unit.component';
+import { EditUnitComponent } from './modules/mesure-unit/components/edit-unit/edit-unit.component';
+import { ListUnitComponent } from './modules/mesure-unit/components/list-unit/list-unit.component';
+import { ModulesComponent } from './modules/modules.component';
+import { ListProductsComponent } from './modules/products/component/list-products/list-products.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,13 +25,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     AddCostumerComponent,
     EditCostumerComponent,
-    ListCostumerComponent
+    ListCostumerComponent,
+    AddUnitComponent,
+    EditUnitComponent,
+    ListUnitComponent,
+    ModulesComponent,
+    ListProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [UserService, CustomerService],
   bootstrap: [AppComponent]
