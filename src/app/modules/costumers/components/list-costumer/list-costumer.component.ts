@@ -14,7 +14,8 @@ export class ListCostumerComponent implements OnInit {
 
   costumers: Costumer[];
 
-  constructor(private router: Router, private service: CustomerService) { }
+  constructor(private router: Router,
+              private service: CustomerService) { }
 
   ngOnInit() {
     this.service.getCustomers().subscribe(data => (this.costumers = data));

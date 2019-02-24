@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class AddCostumerComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private service: CustomerService) { }
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              private service: CustomerService) { }
 
   addForm: FormGroup;
 

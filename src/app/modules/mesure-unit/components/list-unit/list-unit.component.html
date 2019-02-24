@@ -10,5 +10,21 @@
       <th>Prefijo</th>
     </tr>
   </thead>
+  <tbody>
+    <tr *ngFor="let unit of units" >
+      <td class="hidden" >{{unit.unitId}}</td>
+      <td>{{unit.name}}</td>
+      <td>{{unit.pluralName}}</td>
+      <td>{{unit.prefix}}</td>
+      <td>
+        <button class="btn btn-success" (click)="editUnit(unit)">
+          Editar
+        </button>
+        <button class="btn btn-danger" (click)="deleteUnit(unit)">
+          Borrar
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
 </div>

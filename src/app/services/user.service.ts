@@ -21,4 +21,5 @@ export class UserService {
       map(data => data as User[])
       );
   }
+
 }

@@ -18,6 +18,7 @@ import { ListUnitComponent } from './modules/mesure-unit/components/list-unit/li
 import { ModulesComponent } from './modules/modules.component';
 import { ListProductsComponent } from './modules/products/component/list-products/list-products.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { UnitService } from './services/unit.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
     ReactiveFormsModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [UserService, CustomerService],
+  providers: [UserService, CustomerService, UnitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

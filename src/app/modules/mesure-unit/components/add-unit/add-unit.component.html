@@ -1,3 +1,37 @@
-<p>
-  add-unit works!
-</p>
+<div class="col">
+  <h2 class="text-center">Agregar Unidad</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input formControlName="name"
+             placeholder="Nombre"
+             name="name"
+             class="form-control"
+             id="name"
+             required>
+
+             <label for="pluralName">Nombre Plural:</label>
+             <input formControlName="pluralName"
+                    placeholder="Nombre Plural"
+                    name="pluralName"
+                    class="form-control"
+                    id="pluralName"
+                    required>
+  </div>
+
+  <div class = "form-group">
+    <label for="prefix">Prefijo:</label>
+    <input formControlName="prefix"
+          placeholder="Prefijo"
+          name="prefix"
+          class="form-control"
+          id="prefix"
+          required>
+  </div>
+
+  <button class="btn btn-success">Aceptar</button>
+  <button class="btn btn-primary" routerLink="list-costumer">Regresar</button>
+
+  </form>
+</div>
