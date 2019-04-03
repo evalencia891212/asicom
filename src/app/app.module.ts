@@ -22,6 +22,8 @@ import { UnitService } from './services/unit.service';
 import { CustomerService } from './services/customer.service';
 import { AddProductComponent } from './modules/products/component/add-product/add-product.component';
 import { EmployeesRoutingModule } from './modules/employees/components/employees-routing.module';
+import { EmployeesModule } from './modules/employees/employees.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { EmployeesRoutingModule } from './modules/employees/components/employees
     ReactiveFormsModule,
     FormsModule,
     BsDropdownModule.forRoot(),
-    EmployeesRoutingModule
+    EmployeesRoutingModule,
+    EmployeesModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService, CustomerService, UnitService],
   bootstrap: [AppComponent]
