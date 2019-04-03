@@ -1,0 +1,104 @@
+
+<div class="col">
+  <h2 class="text-center">Agregar Producto</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <div class="row">
+              <div class="col-xs-12 col-12 col-md-4 form-group">
+                <label for="unitSelect">Unidad de Medida : </label>
+                <select id="unitSelect" required [(ngModel)] = "unitSelect" class="form-control">
+                   <option *ngFor="let unit of units" [value]="unit.unitId" [ngValue]="unit.unitId">{{unit.name}}</option> 
+                </select>
+              </div>
+    
+              <div class="col-xs-12 col-12 col-md-4 form-group">
+                  <label for="key">Codigo de Barras:</label>
+                  <input type="text"
+                  formControlName="key"
+                  placeholder="Clave del Producto"
+                  name="key"
+                  class="form-control"
+                  id="key" required>
+                </div>
+          </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <label for="key">Clave:</label>
+            <input type="text"
+            formControlName="key"
+            placeholder="Clave"
+            name="key"
+            class="form-control"
+            id="key" required>
+          </div>
+
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <label for="name">Nombre:</label>
+            <input type="text"
+            formControlName="name"
+            placeholder="Nombre"
+            name="firstName"
+            class="form-control"
+            id="firstName" required>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <label for="factureName">Codigo de Barras:</label>
+            <input type="text"
+            formControlName="factureName"
+            placeholder="Nombre de facturacion"
+            name="firstName"
+            class="form-control"
+            id="firstName" required>
+          </div>
+
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <label for="factureName">Codigo de Barras:</label>
+            <input type="text"
+            formControlName="factureName"
+            placeholder="Nombre de facturacion"
+            name="firstName"
+            class="form-control"
+            id="firstName" required>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+                <label for="providerId">Proveedor:</label>
+                <select id="providerId" required [(ngModel)] = "providerId" (change)="fillChart()" class="form-control">
+                    <option [value]=1>Celsius</option>
+                    <option [value]=2>Farenheigt</option>
+                </select>
+             </div>  
+
+             <div class="col-xs-12 col-12 col-md-4 form-group">
+                <label for="purchasePrice">Precio de Compra:</label>
+                <input type="number"
+                formControlName="purchasePrice"
+                placeholder="Precio de Compra"
+                name="purchasePrice"
+                class="form-control"
+                id="purchasePrice" required>
+              </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-12 col-md-4 form-group">
+                <label for="creditPrice">Precio de Venta:</label>
+                <input type="number"
+                formControlName="creditPrice"
+                placeholder="Precio de Venta"
+                name="creditPrice"
+                class="form-control"
+                id="creditPrice" required>
+              </div>
+        </div>
+      
+    </div>
+  </form>
+  </div>

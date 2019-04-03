@@ -1,4 +1,4 @@
-import { CustomerService } from './../../../../clientesREST/src/app/services/customer.service';
+
 import { UserService } from './services/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +11,7 @@ import { AddCostumerComponent } from './modules/costumers/components/add-costume
 import { EditCostumerComponent } from './modules/costumers/components/edit-costumer/edit-costumer.component';
 import { ListCostumerComponent } from './modules/costumers/components/list-costumer/list-costumer.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AddUnitComponent } from './modules/mesure-unit/components/add-unit/add-unit.component';
 import { EditUnitComponent } from './modules/mesure-unit/components/edit-unit/edit-unit.component';
 import { ListUnitComponent } from './modules/mesure-unit/components/list-unit/list-unit.component';
@@ -19,6 +19,9 @@ import { ModulesComponent } from './modules/modules.component';
 import { ListProductsComponent } from './modules/products/component/list-products/list-products.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { UnitService } from './services/unit.service';
+import { CustomerService } from './services/customer.service';
+import { AddProductComponent } from './modules/products/component/add-product/add-product.component';
+import { EmployeesRoutingModule } from './modules/employees/components/employees-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,17 @@ import { UnitService } from './services/unit.service';
     EditUnitComponent,
     ListUnitComponent,
     ModulesComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BsDropdownModule.forRoot()
+    FormsModule,
+    BsDropdownModule.forRoot(),
+    EmployeesRoutingModule
   ],
   providers: [UserService, CustomerService, UnitService],
   bootstrap: [AppComponent]

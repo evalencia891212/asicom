@@ -10,6 +10,6 @@ export class Product {
   registerDate: string;
   active: number;
   providerId: number;
-  contPrice: number;
+  purchasePrice: number;
   creditPrice: number;
 }

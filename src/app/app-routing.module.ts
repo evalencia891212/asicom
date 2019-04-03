@@ -8,6 +8,7 @@ import { DashboardComponent } from './modules/dashboard/components/dashboard/das
 import { ListProductsComponent } from './modules/products/component/list-products/list-products.component';
 import { AddUnitComponent } from './modules/mesure-unit/components/add-unit/add-unit.component';
 import { EditUnitComponent } from './modules/mesure-unit/components/edit-unit/edit-unit.component';
+import { AddProductComponent } from './modules/products/component/add-product/add-product.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'add-unit', component: AddUnitComponent},
   { path: 'edit-unit', component: EditUnitComponent},
   { path: 'list-products', component: ListProductsComponent},
+  { path: 'add-products', component: AddProductComponent},
   { path: '**', redirectTo: '' }
 ];
 

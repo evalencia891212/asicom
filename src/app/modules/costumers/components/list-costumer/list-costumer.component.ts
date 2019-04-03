@@ -1,5 +1,4 @@
 import { CustomerService } from './../../../../services/customer.service';
-import { Customer } from './../../../../../../../../clientesREST/src/app/model/customer';
 import { Costumer } from './../../../../model/costumer';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
