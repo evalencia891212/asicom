@@ -72,8 +72,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-
-                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <button type="button"  id="sidebarCollapse" class="navbar-btn">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -130,6 +129,8 @@
   </div>
 </div>
 
+ 
+
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -140,3 +141,56 @@
     });
 </script>
 
+<div style="position:absolute; top:0; bottom:0; left:0; right: 0; display: flex; flex-direction: column;">
+    <mat-sidenav-container style="flex: 1">
+        <mat-sidenav mode="side" opened="true">
+
+                <mat-nav-list>
+                        <a mat-list-item>Home</a>
+                        <a mat-list-item>Salir</a>  
+                </mat-nav-list>
+            
+                <mat-accordion>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              Personal data
+                            </mat-panel-title>
+                            <mat-panel-description>
+                              Type your name and age
+                            </mat-panel-description>
+                          </mat-expansion-panel-header>
+                      
+                          <mat-form-field>
+                            <input matInput placeholder="First name">
+                          </mat-form-field>
+                      
+                          <mat-form-field>
+                            <input matInput placeholder="Age">
+                          </mat-form-field>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                                             (closed)="panelOpenState = false">
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              Catalogos
+                            </mat-panel-title>
+                            <mat-panel-description>
+                              Informacion operativa
+                            </mat-panel-description>
+                          </mat-expansion-panel-header>
+                          <p>I'm visible because I am open</p>
+                          <mat-list>
+                            <mat-list-item><a class="dropdown-item" routerLink="/list-costumer">Clientes</a> </mat-list-item>
+                            <mat-list-item><a class="dropdown-item" routerLink="/list-unit">Unidades de medida</a> </mat-list-item>
+                            <mat-list-item><a class="dropdown-item" routerLink="/list-products">Productos</a> </mat-list-item>
+                            <mat-list-item><a class="dropdown-item" routerLink="/add-provider">Proveedores</a> </mat-list-item>
+                        </mat-list>
+                        </mat-expansion-panel>
+                      </mat-accordion>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            CONTENT
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

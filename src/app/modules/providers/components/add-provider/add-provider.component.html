@@ -1,0 +1,26 @@
+<form [formGroup]="addForm" class="normal-form">
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <input type="hidden" formControlName="providerId">
+        <mat-form-field>
+          <input formControlName="name" matInput placeholder="Nombre">
+          <mat-error>Este dato es necesario.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="street" matInput placeholder="Calle">
+          <mat-error>Este dato es necesario.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="number" matInput placeholder="Numero">
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="neighborhood" matInput placeholder="Colonia">
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="telephone" matInput placeholder="Telefono">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

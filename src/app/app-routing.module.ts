@@ -9,6 +9,8 @@ import { ListProductsComponent } from './modules/products/component/list-product
 import { AddUnitComponent } from './modules/mesure-unit/components/add-unit/add-unit.component';
 import { EditUnitComponent } from './modules/mesure-unit/components/edit-unit/edit-unit.component';
 import { AddProductComponent } from './modules/products/component/add-product/add-product.component';
+import { AddProviderComponent } from './modules/providers/components/add-provider/add-provider.component';
+import { ProviderComponent } from './modules/providers/components/provider/provider.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'edit-unit', component: EditUnitComponent},
   { path: 'list-products', component: ListProductsComponent},
   { path: 'add-products', component: AddProductComponent},
+  { path: 'add-provider', component: ProviderComponent},
   { path: '**', redirectTo: '' }
 ];
 

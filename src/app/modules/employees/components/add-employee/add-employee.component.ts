@@ -10,14 +10,15 @@ import { Router } from '@angular/router';
 })
 export class AddEmployeeComponent implements OnInit {
 
+  addForm: FormGroup; 
+
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private service: EmployeeService) { }
 
 
-  addForm: FormGroup; 
-              
-
+ 
+          
   ngOnInit() {
     this.addForm = this.formBuilder.group({
       employeeId: [],

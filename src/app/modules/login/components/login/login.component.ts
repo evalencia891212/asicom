@@ -2,6 +2,8 @@ import { UserService } from './../../../../services/user.service';
 import { User } from './../../../../model/user';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 @Component({
@@ -13,13 +15,15 @@ export class LoginComponent implements OnInit {
 
   public user$: User[];
 
-  constructor(private _user: UserService, private router: Router) { }
+  constructor(private _user: UserService, private router: Router,
+    private toastr: ToastrService) { }
 
   ngOnInit() {
-
+    
   }
 
   loginUser(event) {
+    
     event.preventDefault();
     const target = event.target;
     const userName = target.querySelector('#inputUser').value;
@@ -29,7 +33,8 @@ export class LoginComponent implements OnInit {
       this.user$ = data;
       if (this.user$.length !== 0) {
         this.router.navigate(['/dashboard']);
-        console.log('Usuario encontrado');
+        //console.log('Usuario encontrado');
+        
       } else {
         console.log('Usuario no encontrado');
       }

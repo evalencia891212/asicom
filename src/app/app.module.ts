@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+//Ventana
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
@@ -21,9 +25,48 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { UnitService } from './services/unit.service';
 import { CustomerService } from './services/customer.service';
 import { AddProductComponent } from './modules/products/component/add-product/add-product.component';
-import { EmployeesRoutingModule } from './modules/employees/components/employees-routing.module';
+import { EmployeesRoutingModule } from './modules/employees/employees-routing.module';
 import { EmployeesModule } from './modules/employees/employees.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProvidersModule} from './modules/providers/providers.module';
+
+import {
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatDrawerContainer,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,6 +81,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ModulesComponent,
     ListProductsComponent,
     AddProductComponent
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +92,44 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BsDropdownModule.forRoot(),
     EmployeesRoutingModule,
     EmployeesModule,
-    BrowserAnimationsModule
+    ProvidersModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule
   ],
   providers: [UserService, CustomerService, UnitService],
   bootstrap: [AppComponent]
