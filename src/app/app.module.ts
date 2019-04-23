@@ -49,13 +49,14 @@ import {
   MatListModule,
   MatMenuModule,
   MatNativeDateModule,
-  MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatRadioModule,
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
+  MatPaginator,
+  MatPaginatorModule,
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
@@ -65,7 +66,8 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule
+  MatTreeModule,
+  MatTableDataSource
 } from '@angular/material';
 
 @NgModule({
@@ -113,7 +115,6 @@ import {
     MatListModule,
     MatMenuModule,
     MatNativeDateModule,
-    MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
@@ -129,7 +130,8 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    MatPaginatorModule
   ],
   providers: [UserService, CustomerService, UnitService],
   bootstrap: [AppComponent]

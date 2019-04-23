@@ -4,9 +4,11 @@ import { AddProviderComponent } from './components/add-provider/add-provider.com
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import * as Material from "@angular/material";
 import { ProviderComponent } from './components/provider/provider.component';
+import { ListProvidersComponent } from './components/list-providers/list-providers.component';
+
 
 @NgModule({
-  declarations: [AddProviderComponent, ProviderComponent],
+  declarations: [AddProviderComponent, ProviderComponent, ListProvidersComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -21,6 +23,8 @@ import { ProviderComponent } from './components/provider/provider.component';
     Material.MatDatepickerModule,
     Material.MatNativeDateModule,
     Material.MatButtonModule,
+    Material.MatPaginatorModule,
+    Material.MatTableModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -35,6 +39,7 @@ import { ProviderComponent } from './components/provider/provider.component';
     Material.MatDatepickerModule,
     Material.MatNativeDateModule,
     Material.MatButtonModule,
+    Material.MatTableModule
   ]
 })
 export class ProvidersModule { }

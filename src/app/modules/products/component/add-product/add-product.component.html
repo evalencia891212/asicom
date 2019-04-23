@@ -1,9 +1,11 @@
 
-<div class="col">
+<div class="container">
   <h2 class="text-center">Agregar Producto</h2>
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
+
           <div class="row">
+              
               <div class="col-xs-12 col-12 col-md-4 form-group">
                 <label for="unitSelect">Unidad de Medida : </label>
                 <select id="unitSelect" required [(ngModel)] = "unitSelect" class="form-control">
@@ -19,60 +21,60 @@
                   name="key"
                   class="form-control"
                   id="key" required>
-                </div>
+              </div>
+
+              <div class="col-xs-12 col-12 col-md-4 form-group">
+                  <label for="key">Clave:</label>
+                  <input type="text"
+                    formControlName="key"
+                    placeholder="Clave"
+                    name="key"
+                    class="form-control"
+                    id="key" required>
+              </div>
+
           </div>
 
         <div class="row">
-          <div class="col-xs-12 col-12 col-md-4 form-group">
-            <label for="key">Clave:</label>
-            <input type="text"
-            formControlName="key"
-            placeholder="Clave"
-            name="key"
-            class="form-control"
-            id="key" required>
-          </div>
-
+      
           <div class="col-xs-12 col-12 col-md-4 form-group">
             <label for="name">Nombre:</label>
             <input type="text"
             formControlName="name"
             placeholder="Nombre"
-            name="firstName"
+            name="name"
             class="form-control"
-            id="firstName" required>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-xs-12 col-12 col-md-4 form-group">
-            <label for="factureName">Codigo de Barras:</label>
-            <input type="text"
-            formControlName="factureName"
-            placeholder="Nombre de facturacion"
-            name="firstName"
-            class="form-control"
-            id="firstName" required>
+            id="name" required>
           </div>
 
           <div class="col-xs-12 col-12 col-md-4 form-group">
-            <label for="factureName">Codigo de Barras:</label>
-            <input type="text"
-            formControlName="factureName"
-            placeholder="Nombre de facturacion"
-            name="firstName"
-            class="form-control"
-            id="firstName" required>
-          </div>
+              <label for="barCode">Codigo de Barras:</label>
+              <input type="text"
+              formControlName="barCode"
+              placeholder="Codigo de Barras"
+              name="barCode"
+              class="form-control"
+              id="barCode" required>
+            </div>
+  
+            <div class="col-xs-12 col-12 col-md-4 form-group">
+              <label for="factureName">Nombre de facturacion:</label>
+              <input type="text"
+              formControlName="factureName"
+              placeholder="Nombre de facturacion"
+              name="firstName"
+              class="form-control"
+              id="firstName" required>
+            </div>
+
         </div>
+
         
         <div class="row">
-          <div class="col-xs-12 col-12 col-md-4 form-group">
+             <div class="col-xs-12 col-12 col-md-4 form-group">
                 <label for="providerId">Proveedor:</label>
-                <select id="providerId" required [(ngModel)] = "providerId" (change)="fillChart()" class="form-control">
-                    <option [value]=1>Celsius</option>
-                    <option [value]=2>Farenheigt</option>
+                <select id="providerId" required [(ngModel)] = "providerId" class="form-control">
+                  <option *ngFor="let provider of providers" [value]="provider.providerId" [ngValue]="provider.providerId">{{provider.name}}</option> 
                 </select>
              </div>  
 
@@ -86,19 +88,30 @@
                 id="purchasePrice" required>
               </div>
 
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-12 col-md-4 form-group">
-                <label for="creditPrice">Precio de Venta:</label>
-                <input type="number"
-                formControlName="creditPrice"
-                placeholder="Precio de Venta"
-                name="creditPrice"
-                class="form-control"
-                id="creditPrice" required>
+              <div class="col-xs-12 col-12 col-md-4 form-group">
+                  <label for="creditPrice">Precio de Venta:</label>
+                  <input type="number"
+                  formControlName="creditPrice"
+                  placeholder="Precio de Venta"
+                  name="creditPrice"
+                  class="form-control"
+                  id="creditPrice" required>
               </div>
+
         </div>
-      
+
+        <div class="row">
+            
+          
+
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <button class="btn btn-success">Aceptar</button>
+            <button class="btn btn-primary" routerLink="list-products">Regresar</button>    
+          </div>
+        </div>
     </div>
   </form>
   </div>

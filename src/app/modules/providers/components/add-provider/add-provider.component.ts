@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormsModule, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PoroviderService } from 'src/app/services/porovider.service';
+import { Provider } from './../../../../model/provider';
 
 
 @Component({
@@ -13,9 +15,11 @@ import { Router } from '@angular/router';
 export class AddProviderComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
-            private router: Router) { }
+              private router: Router,
+              private service : PoroviderService) { }
 
   addForm: FormGroup;
+  
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
@@ -26,6 +30,17 @@ export class AddProviderComponent implements OnInit {
       neighborhood: [''],
       telephone: ['', Validators.required]
     });
+  }
+
+  onSubmit() {
+    this.service.createProvider(this.addForm.value)
+    .subscribe(data => {
+      this.service.getProviders().subscribe(data => (this.service.providers = data));
+    });
+  }
+
+  onClear(){
+    
   }
 
 }
